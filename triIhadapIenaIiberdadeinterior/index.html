@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video</title>
+
+  <script>
+    window.pixelId = "6960563b5a131e2c09c4b7e7";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "[https://cdn.utmify.com.br/scripts/pixel/pixel.js](https://cdn.utmify.com.br/scripts/pixel/pixel.js)");
+    document.head.appendChild(a);
+  </script>
+
+
+  <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/players/6982c8b99f4a0b25f3ad9720/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="preload" href="https://cdn.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/6982c7b2d7336fb6b1bc543b/main.m3u8" as="fetch">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+
+  <style>
+    :root {
+      --bg1: #0b1d3a;
+      --bg2: #0f2a52;
+      --bg3: #081427;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, .82);
+      --muted2: rgba(255, 255, 255, .68);
+      --accent: #2f6bff;
+      --yellow: #e6b325;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    html {
+      background: var(--bg3);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(900px 420px at 50% 0%, rgba(47, 107, 255, .22), transparent 55%),
+        radial-gradient(1000px 650px at 15% 15%, rgba(120, 170, 255, .16), transparent 60%),
+        radial-gradient(900px 700px at 85% 20%, rgba(47, 107, 255, .12), transparent 62%),
+        linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 40%, var(--bg3) 100%);
+      overflow-x: hidden;
+    }
+
+    .topStrip {
+      width: 100%;
+      background: var(--yellow);
+      color: #2b1a00;
+      font-weight: 800;
+      font-size: clamp(12px, 1.4vw, 14px);
+      text-transform: uppercase;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 34px 18px 24px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 10px 10px 26px;
+    }
+
+    .headline {
+      font-weight: 800;
+      font-size: clamp(24px, 3.2vw, 44px);
+      line-height: 1.15;
+      margin: 0 0 26px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 22px rgba(0, 0, 0, .42);
+    }
+
+    .highlight-yellow {
+      color: #f5c518;
+    }
+
+    .ratings {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+      font-weight: 700;
+      font-size: 14px;
+      flex-direction: column;
+    }
+
+    .arrow-up {
+      width: 38px;
+      height: 38px;
+      margin-top: 6px;
+      display: block;
+      fill: var(--yellow);
+      filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .35));
+      animation: bounce 1.2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        opacity: .95;
+      }
+
+      50% {
+        transform: translateY(-8px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(230, 179, 37, 0);
+      }
+
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 18px rgba(230, 179, 37, .45);
+      }
+    }
+
+    .countBox {
+      margin-top: 10px;
+      padding: 16px 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .10);
+      border: 1px solid rgba(255, 255, 255, .20);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: pulse 1.6s ease-in-out infinite;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, .35);
+      backdrop-filter: blur(6px);
+    }
+
+    .countNumber {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--yellow);
+    }
+
+    .countText {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      opacity: .95;
+      text-align: center;
+    }
+
+    .stars {
+      color: #f5c518;
+      letter-spacing: 2px;
+    }
+
+    .belowFoldSpacer {
+      height: clamp(60px, 10vh, 160px);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      background: rgba(0, 0, 0, .2);
+    }
+
+    .footerWrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 18px 28px;
+    }
+
+    .footLinks {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footLinks a {
+      color: rgba(255, 255, 255, .82);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .legal {
+      max-width: 980px;
+      margin: 0 auto;
+      color: var(--muted2);
+      font-size: 12px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    /* ✅ Delay VTurb: escondido até o segundo 442 */
+    .esconder {
+      display: none;
+    }
+
+    /* Seções de texto (você pode adicionar/remover a classe .esconder) */
+    .section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 22px 10px 0;
+      text-align: left;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.25;
+      color: var(--text);
+    }
+
+    .section p {
+      margin: 0 0 14px;
+    }
+
+    @media (max-width:560px) {
+      .headline {
+        font-size: 20px;
+        line-height: 1.18;
+        margin-bottom: 22px;
+      }
+
+      .headline .line-1,
+      .headline .line-2 {
+        display: block;
+      }
+    }
+
+    @media (min-width:561px) {
+
+      .headline .line-1,
+      .headline .line-2 {
+        display: inline;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topStrip" id="topStrip"></div>
+
+  <main class="wrap">
+    <section class="hero">
+
+
+
+
+      <vturb-smartplayer id="vid-6982c8b99f4a0b25f3ad9720" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
+      <script type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/players/6982c8b99f4a0b25f3ad9720/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+
+
+
+      <!-- ✅ Script de delay (cole logo abaixo do embed do player) -->
+      <script>
+        var delaySeconds = 820;
+
+        function initVturbDelay() {
+          var player = document.querySelector("vturb-smartplayer");
+          if (!player) return setTimeout(initVturbDelay, 200);
+
+          player.addEventListener("player:ready", function () {
+            // Mostra os elementos com delay
+            player.displayHiddenElements(delaySeconds, [".esconder"], { persist: true });
+
+            // Esconde o aviso de som quando o delay acabar
+            setTimeout(function () {
+              var soundNotice = document.getElementById("soundNotice");
+              if (soundNotice) {
+                soundNotice.style.display = "none";
+              }
+            }, delaySeconds * 1000);
+          });
+        }
+
+        initVturbDelay();
+      </script>
+
+
+    </section>
+
+
+
+    <div class="ratings" id="soundNotice">
+      <div style="display:flex;align-items:center;gap:8px;opacity:.9;">
+        <span style="font-size:18px;">🔊</span>
+        <span>Verifique se o som está ligado.</span>
+      </div>
+    </div>
+
+
+    <section section class="offer-section esconder">
+      <svg class="arrow-up" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 4l-7 7h4v9h6v-9h4z" />
+      </svg>
+
+      <div class="countBox">
+        <div class="countNumber" id="vagaCount">9</div>
+        <div class="countText">Vagas restantes pra maçonaria</div>
+      </div>
+
+
+      <script>
+        (function () {
+          var n = 9;
+          var el = document.getElementById('vagaCount');
+          if (!el) return;
+
+          el.textContent = n;
+
+          var interval = setInterval(function () {
+            if (n > 1) {
+              n--;
+              el.textContent = n;
+            } else {
+              clearInterval(interval);
+            }
+          }, 2600); // descida lenta
+        })();
+      </script>
+
+      <div class="belowFoldSpacer"></div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="footerWrap">
+      <nav class="footLinks">
+        <a href="../termos">Termos</a>
+        <a href="../privacidade">Política</a>
+      </nav>
+
+      <p class="legal">
+        Este site não é afiliado ao Facebook, Instagram ou à Meta Platforms, Inc. Conteúdo educacional.
+        <br><br>
+        Todos os direitos reservados © 2026
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const dias = ['DOMINGO', 'SEGUNDA-FEIRA', 'TERÇA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SÁBADO'];
+      const meses = ['JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO'];
+      const hoje = new Date();
+      document.getElementById('topStrip').textContent =
+        `SÓ HOJE, ${dias[hoje.getDay()]}, ${hoje.getDate()} DE ${meses[hoje.getMonth()]}`;
+    })();
+  </script>
+
+</body>
+
+</html>
